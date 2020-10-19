@@ -4,7 +4,7 @@
   <div class="login_container">
     <!-- logo区域 -->
     <div class="logo">
-      <img src="../assets/logo.png" alt="">
+      <img src="../assets/7b55d984d28a9738e43ab44fff3f82fe.jpg" alt="">
     </div>
     <!-- 表单数据区域 -->
     <el-form :model="loginForm" :rules="loginFormRules" ref="loginFormRef">
@@ -30,8 +30,8 @@ export default {
   data () {
     return {
       loginForm: {
-        username:'',
-        password:''
+        username:'admin',
+        password:'123456'
       },
       loginFormRules:{
          username: [
@@ -62,9 +62,10 @@ export default {
            if(res.meta.status !== 200)
            return this.$message.error('登录失败')
            this.$message.success('登录成功')
+           // 将服务器返回token令牌储存到本地
+           sessionStorage.setItem('token',res.data.token)
           //  编程式导航跳转到home页面
           this.$router.push('/home')
-          // 将服务器返回token令牌储存到本地
           }
         })
       }
