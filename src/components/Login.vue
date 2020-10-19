@@ -66,6 +66,17 @@ export default {
            sessionStorage.setItem('token',res.data.token)
           //  编程式导航跳转到home页面
           this.$router.push('/home')
+          // 推送功能分支
+          // 查看分支git branch
+          // 将分支代码提交并推送到远端仓库
+          // git add .
+          // git commit -m 
+          // git push -u origin
+          // 回到主分支 git checkout master
+          // 合并分支
+          // git merge 
+          // 更新分支
+          // git push
           }
         })
       }
