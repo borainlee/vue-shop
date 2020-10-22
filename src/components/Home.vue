@@ -81,7 +81,7 @@ methods: {
           cancelButtonText: '取消',
           type: 'warning'
         }).catch(err=> err)
-        console.log(res);
+        // console.log(res);
         if(res !== 'confirm') 
         // 点击取消按钮
         return this.$message.info('已取消退出')
@@ -99,7 +99,7 @@ methods: {
         return this.$message.error('获取菜单列表失败')
       }
       this.menulist = res.data
-      console.log(this.menulist);
+      // console.log(this.menulist);
      },
     //  点击赋值activePath
      getPath(path){
@@ -126,6 +126,7 @@ methods: {
     img {
       vertical-align: middle;
       height: 60px;
+      border-radius: 50%;
     }
     span {
       font-size: 20px;

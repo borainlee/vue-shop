@@ -88,6 +88,7 @@ export default {
   width: 100%;
   height: 100%;
   background-color: #2b4b6b;
+  // background: url('../assets/7b55d984d28a9738e43ab44fff3f82fe.jpg');
   .login_container{
     display: flex;
     align-items: flex-end;
