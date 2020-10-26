@@ -33,12 +33,9 @@
       <el-table border stripe :data="userList" style="width: 100%">
         <!-- 索引列 -->
         <el-table-column type="index" width="50"> </el-table-column>
-        <el-table-column prop="create_time" label="日期">
+        <el-table-column label="日期">
           <template slot-scope="scope">
-            {{
-              Number(scope.row.create_time + '000')
-                | dateFormate(scope.row.create_time)
-            }}
+            {{ Number(scope.row.create_time + '000') | dateFormat }}
           </template>
         </el-table-column>
         <el-table-column prop="username" label="姓名"> </el-table-column>

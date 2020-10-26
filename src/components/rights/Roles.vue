@@ -18,11 +18,9 @@
               :key="item1.id"
             >
               <el-col :span="6">
-                <el-tag
-                  closable=""
-                  @close="removeRoleById(scope.row, item1.id)"
-                  >{{ item1.authName }}</el-tag
-                >
+                <el-tag closable @close="removeRoleById(scope.row, item1.id)">{{
+                  item1.authName
+                }}</el-tag>
               </el-col>
               <el-col :span="18">
                 <el-row
