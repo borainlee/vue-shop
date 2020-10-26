@@ -1,11 +1,15 @@
 import Vue from 'vue'
 import 'element-ui/lib/theme-chalk/index.css'
 import {
+  Alert,
   Aside,
   Breadcrumb,
   BreadcrumbItem,
   Button,
   Card,
+  Cascader,
+  Checkbox,
+  CheckboxGroup,
   Col,
   Container,
   Dialog,
@@ -22,13 +26,18 @@ import {
   Pagination,
   Row,
   Select,
+  Step,
+  Steps,
   Submenu,
   Switch,
   Table,
   TableColumn,
+  TabPane,
+  Tabs,
   Tag,
   Tooltip,
-  Tree
+  Tree,
+  Upload
 } from 'element-ui'
 Vue.use(Form)
 Vue.use(FormItem)
@@ -56,6 +65,15 @@ Vue.use(Tree)
 Vue.use(Tooltip)
 Vue.use(Option)
 Vue.use(Select)
+Vue.use(Cascader)
+Vue.use(Alert)
+Vue.use(Tabs)
+Vue.use(TabPane)
+Vue.use(Step)
+Vue.use(Steps)
+Vue.use(Checkbox)
+Vue.use(CheckboxGroup)
+Vue.use(Upload)
 // 原型方式挂载message
 Vue.prototype.$message = Message
 Vue.prototype.$confirm = MessageBox.confirm

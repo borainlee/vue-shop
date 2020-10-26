@@ -1,13 +1,17 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 // 导入登录组件
-import Login from '../components/Login.vue'
-import Home from '../components/Home.vue'
-import Welcome from '../components/Welcome.vue'
-import Users from '../components/users/Users.vue'
-import Rights from '../components/rights/Rights.vue'
-import Roles from '../components/rights/Roles.vue'
-import Categories from '../components/goods/Categories.vue'
+import Login from '@/components/Login.vue'
+import Home from '@/components/Home.vue'
+import Welcome from '@/components/Welcome.vue'
+import Users from '@/components/users/Users.vue'
+import Rights from '@/components/rights/Rights.vue'
+import Roles from '@/components/rights/Roles.vue'
+import Categories from '@/components/goods/Categories.vue'
+import Params from '@/components/goods/Params.vue'
+import Goods from '@/components/goods/Goods.vue'
+// 导入添加商品的组件
+import Add from '@/components/goods/Add.vue'
 Vue.use(VueRouter)
 // 路由组件规则
 const routes = [
@@ -22,7 +26,10 @@ const routes = [
       { path: '/users', component: Users },
       { path: '/rights', component: Rights },
       { path: '/roles', component: Roles },
-      { path: '/goods', component: Categories }
+      { path: '/categories', component: Categories },
+      { path: '/params', component: Params },
+      { path: '/goods', component: Goods },
+      { path: '/goods/add', component: Add }
     ]
   }
 ]
