@@ -276,7 +276,7 @@ export default {
           return this.$message.error('创建商品失败')
         }
         this.$message.success('创建商品成功')
-        this.$router.push('/good')
+        this.$router.push('/goods')
       })
     },
   },
