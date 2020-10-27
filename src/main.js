@@ -8,6 +8,9 @@ import './assets/fonts/iconfont.css'
 import './assets/global.css'
 // 导入axios
 import axios from 'axios'
+// 导入nprogress
+import Nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
 // 导入富文本框
 import VueQuillEditor from 'vue-quill-editor'
 import 'quill/dist/quill.core.css' // import styles
@@ -29,9 +32,17 @@ sessionStorage.setItem('baseUrl', 'http://127.0.0.1:8888/api/private/v1/')
 Vue.prototype.$http = axios
 // axios请求拦截器中挂载token令牌
 axios.interceptors.request.use(config => {
+  // 开启nprogress
+  Nprogress.start()
   config.headers.Authorization = sessionStorage.getItem('token')
   return config
 }),
+  // axios响应拦截器
+  axios.interceptors.response.use(response => {
+    // 开启nprogress
+    Nprogress.done()
+    return response
+  }),
   // 定义一个全局时间过滤器
   Vue.filter('dateFormat', function(val, str) {
     // const date = new Date(val)

@@ -10,6 +10,8 @@ import Roles from '@/components/rights/Roles.vue'
 import Categories from '@/components/goods/Categories.vue'
 import Params from '@/components/goods/Params.vue'
 import Goods from '@/components/goods/Goods.vue'
+import Orders from '@/components/orders/Orders.vue'
+import Reports from '@/components/reports/Reports.vue'
 // 导入添加商品的组件
 import Add from '@/components/goods/Add.vue'
 Vue.use(VueRouter)
@@ -29,7 +31,9 @@ const routes = [
       { path: '/categories', component: Categories },
       { path: '/params', component: Params },
       { path: '/goods', component: Goods },
-      { path: '/goods/add', component: Add }
+      { path: '/goods/add', component: Add },
+      { path: '/orders', component: Orders },
+      { path: '/reports', component: Reports },
     ]
   }
 ]
